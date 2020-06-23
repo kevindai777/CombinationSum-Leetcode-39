@@ -5,7 +5,7 @@ let candidates = [2,3,6,7]
 let target = 7
 
 
-//O()
+//O(n!) solution that backtracks through all possible unique subarrays.
 
 let result = []
 let arr = []
@@ -23,6 +23,7 @@ function backtrack(arr, sum, index) {
 
     if (sum == target) {
         result.push(arr)
+        return
     }
 
     for (let i = index; i < candidates.length; i++) {
